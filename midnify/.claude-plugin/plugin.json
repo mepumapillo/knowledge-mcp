@@ -1,0 +1,6 @@
+{
+  "name": "midnify",
+  "version": "0.1.0",
+  "description": "Base de conocimiento personal de Miguel: conecta el MCP midnify y enseña al agente a consultarlo",
+  "author": { "name": "Miguel" }
+}

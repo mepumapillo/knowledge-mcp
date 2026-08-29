@@ -1,0 +1,20 @@
+{
+  "name": "knowledge-mcp",
+  "owner": {
+    "name": "Miguel",
+    "email": "miguel.pumapillog@gmail.com"
+  },
+  "metadata": {
+    "description": "Marketplace personal de plugins de conocimiento (MCPs de notas estilo Context7)",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "midnify",
+      "source": "./midnify",
+      "description": "Base de conocimiento personal de Miguel: conecta el MCP midnify (VPS, Bearer auth) y enseña al agente a consultarlo",
+      "version": "0.1.0",
+      "author": { "name": "Miguel" }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "midnify": {
+    "type": "http",
+    "url": "https://midnify.srv1727066.hstgr.cloud/mcp",
+    "headers": {
+      "Authorization": "Bearer ${MIDNIFY_MCP_TOKEN}"
+    }
+  }
+}
