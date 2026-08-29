@@ -15,17 +15,17 @@ conocimiento personal (MCPs de notas estilo "Context7 propio").
 # 1. Agregar el marketplace (repo privado — requiere gh/git autenticado)
 /plugin marketplace add mepumapillo/knowledge-mcp
 
-# 2. Instalar el plugin
+# 2. Instalar el plugin (trae el MCP dentro)
 /plugin install midnify@knowledge-mcp
 
-# 3. Auth: el MCP exige MIDNIFY_MCP_TOKEN en el entorno (vive en Infisical,
-#    proyecto general, env dev). Lanzar Claude con el token inyectado:
-MIDNIFY_MCP_TOKEN=$(infisical --domain="https://infisical.srv1727066.hstgr.cloud" \
-  secrets get MIDNIFY_MCP_TOKEN \
-  --projectId c0e59779-a204-48f4-a759-2a511fb64b8b --env dev --plain --silent) claude
+# 3. Autenticarse (OAuth, tipo Figma): en la sesión correr /mcp → midnify →
+#    Authenticate. Se abre la página de login en el navegador; la contraseña es
+#    MIDNIFY_LOGIN_PASSWORD (Infisical, proyecto general, env dev).
 ```
 
-Sin el token, el servidor responde `401` y el MCP no conecta — esa es la auth.
+Los tokens los gestiona y renueva Claude; no hay nada que exportar en el entorno.
+(Uso headless/CI: el token estático `MIDNIFY_MCP_TOKEN` de Infisical sigue
+aceptándose como header `Authorization: Bearer` vía `--mcp-config` propio.)
 
 ## Fuente canónica
 

@@ -20,5 +20,5 @@ Las notas personales de Miguel viven detrás del MCP `midnify` (tools
 
 - La nota manda sobre tu conocimiento de entrenamiento: si difieren, responde lo
   que dice la nota y señala la diferencia.
-- El servidor exige `MIDNIFY_MCP_TOKEN` en el entorno; si el MCP no conecta,
-  avisa que el servidor no está corriendo o falta el token — no simules resultados.
+- El servidor usa OAuth: si el MCP figura como no autenticado, indica al usuario
+  correr `/mcp` → Authenticate (login en el navegador). No simules resultados.
